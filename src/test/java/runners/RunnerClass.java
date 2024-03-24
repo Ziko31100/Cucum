@@ -11,8 +11,10 @@ import org.junit.runner.RunWith;
         glue = "steps",
       dryRun = false,
    //     tags = "@sprint1 or @sprint2"
-tags = "@datatable",
-plugin = {"pretty"}
+tags = "@dbTest",
+plugin = {"pretty","html:target/cucumber.html","json:target/cucumber.json",
+        // rerun plugin generates the txt file of all failed test scenarios
+        "rerun:target/failed.txt"}
 
 )
 public class RunnerClass {
